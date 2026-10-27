@@ -15,7 +15,7 @@ npm --version
 ## Setup
 
 ```bash
-git clone https://github.com/<your-username>/edgard-duct-cleaning-website.git
+git clone https://github.com/Michael3255/edgard-duct-cleaning-website.git
 cd edgard-duct-cleaning-website
 npm install
 ```
