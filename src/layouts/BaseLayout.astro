@@ -1,0 +1,39 @@
+---
+export interface Props {
+  title?: string;
+  description?: string;
+}
+
+const {
+  title = 'Edgard Duct Cleaning LLC — Breathe Clean Fresh Air',
+  description = 'Professional air duct cleaning serving Stafford, VA and the surrounding area. Full unit cleaning. Call (540) 288-6840 for a free quote.',
+} = Astro.props;
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="generator" content={Astro.generator} />
+    <title>{title}</title>
+    <meta name="description" content={description} />
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+    <meta property="og:type" content="website" />
+
+    <script type="application/ld+json" set:html={JSON.stringify({
+      '@context': 'https://schema.org',
+      '@type': 'LocalBusiness',
+      name: 'Edgard Duct Cleaning LLC.',
+      description: 'Air duct cleaning services. Breathe Clean Fresh Air.',
+      telephone: '+1-540-288-6840',
+      areaServed: 'Stafford, VA',
+      priceRange: '$$',
+    })} />
+  </head>
+  <body class="min-h-screen bg-white text-slate-800 antialiased pb-20 md:pb-0">
+    <slot />
+  </body>
+</html>

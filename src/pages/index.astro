@@ -1,0 +1,195 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import CallBar from '../components/CallBar.astro';
+
+const primaryPhoneDisplay = '(540) 288-6840';
+const primaryPhoneTel = '+15402886840';
+const secondaryPhoneDisplay = '(540) 287-7681';
+const secondaryPhoneTel = '+15402877681';
+
+const services = [
+  { title: 'Allergens', body: 'We help remove the dust and particles that collect in your HVAC system over time.' },
+  { title: 'Dust', body: 'Full-unit cleaning removes built-up dust from supply and return ducts.' },
+  { title: 'Debris', body: 'Construction debris, pet dander, and buildup — cleared from your ductwork.' },
+  { title: 'Insects', body: 'We clean out insect nests and droppings commonly found in older duct systems.' },
+  { title: 'Mold', body: 'Visible growth is identified and addressed; licensed remediation referred when needed.' },
+];
+---
+
+<BaseLayout>
+  <!-- Header -->
+  <header class="bg-white border-b border-slate-200 sticky top-0 z-40 shadow-sm">
+    <div class="max-w-6xl mx-auto px-4 py-3 flex items-center justify-between gap-4">
+      <div class="flex items-center gap-2 min-w-0">
+        <div class="w-10 h-10 rounded-lg bg-brand-blue flex items-center justify-center flex-shrink-0">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="white" class="w-6 h-6">
+            <rect x="4" y="5" width="16" height="2" rx="1"/>
+            <rect x="4" y="9" width="16" height="2" rx="1"/>
+            <rect x="4" y="13" width="16" height="2" rx="1"/>
+            <rect x="4" y="17" width="16" height="2" rx="1"/>
+          </svg>
+        </div>
+        <div class="min-w-0">
+          <div class="font-bold text-brand-blue-dark text-base md:text-lg leading-tight truncate">Edgard Duct Cleaning</div>
+          <div class="text-xs text-slate-500 hidden sm:block">Breathe Clean Fresh Air</div>
+        </div>
+      </div>
+      <a
+        href={`tel:${primaryPhoneTel}`}
+        class="hidden md:inline-flex items-center gap-2 bg-brand-orange hover:bg-brand-orange-dark text-white font-semibold px-5 py-2.5 rounded-lg transition"
+      >
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-4 h-4">
+          <path d="M6.62 10.79a15.05 15.05 0 006.59 6.59l2.2-2.2a1 1 0 011.01-.24c1.12.37 2.33.57 3.58.57a1 1 0 011 1V20a1 1 0 01-1 1A17 17 0 013 4a1 1 0 011-1h3.5a1 1 0 011 1c0 1.25.2 2.46.57 3.58a1 1 0 01-.24 1.01l-2.21 2.2z"/>
+        </svg>
+        {primaryPhoneDisplay}
+      </a>
+    </div>
+  </header>
+
+  <!-- Hero -->
+  <section class="bg-gradient-to-b from-brand-blue to-brand-blue-dark text-white">
+    <div class="max-w-6xl mx-auto px-4 py-16 md:py-24 text-center">
+      <h1 class="text-4xl md:text-6xl font-bold tracking-tight mb-4">
+        Breathe Clean Fresh Air
+      </h1>
+      <p class="text-lg md:text-2xl text-brand-blue-light mb-8 max-w-2xl mx-auto">
+        Full-unit air duct cleaning serving <span class="text-white font-semibold">Stafford, VA</span>
+        <span class="opacity-75">[and surrounding area — TBD]</span>.
+      </p>
+      <div class="flex flex-col sm:flex-row gap-3 justify-center items-center">
+        <a
+          href={`tel:${primaryPhoneTel}`}
+          class="w-full sm:w-auto bg-brand-orange hover:bg-brand-orange-dark text-white font-bold text-lg px-8 py-4 rounded-lg shadow-lg transition inline-flex items-center justify-center gap-2"
+        >
+          Call for a Free Quote
+        </a>
+        <a
+          href="#services"
+          class="w-full sm:w-auto bg-white/10 hover:bg-white/20 text-white font-semibold px-6 py-4 rounded-lg transition"
+        >
+          See Services
+        </a>
+      </div>
+      <p class="mt-6 text-brand-blue-light text-sm">
+        {primaryPhoneDisplay} &middot; {secondaryPhoneDisplay}
+      </p>
+    </div>
+  </section>
+
+  <!-- Trust strip -->
+  <section class="bg-slate-50 border-y border-slate-200">
+    <div class="max-w-6xl mx-auto px-4 py-6 grid grid-cols-2 md:grid-cols-4 gap-4 text-center text-sm">
+      <div class="text-slate-600">
+        <div class="font-bold text-brand-blue-dark text-base">Locally Owned</div>
+        <div class="text-slate-500">Stafford, VA area</div>
+      </div>
+      <div class="text-slate-600">
+        <div class="font-bold text-brand-blue-dark text-base">Licensed &amp; Insured</div>
+        <div class="text-slate-500">[Pending confirmation]</div>
+      </div>
+      <div class="text-slate-600">
+        <div class="font-bold text-brand-blue-dark text-base">Free Quotes</div>
+        <div class="text-slate-500">No pressure, upfront pricing</div>
+      </div>
+      <div class="text-slate-600">
+        <div class="font-bold text-brand-blue-dark text-base">Full-Unit Cleaning</div>
+        <div class="text-slate-500">Supply, return, and vents</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Services -->
+  <section id="services" class="py-16 md:py-24">
+    <div class="max-w-6xl mx-auto px-4">
+      <div class="text-center mb-12">
+        <h2 class="text-3xl md:text-4xl font-bold text-brand-blue-dark mb-3">What We Clean</h2>
+        <p class="text-slate-600 max-w-2xl mx-auto">
+          Our service includes full-unit cleaning for the common contaminants that build up inside your HVAC system.
+        </p>
+      </div>
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        {services.map((s) => (
+          <div class="border border-slate-200 rounded-xl p-6 hover:shadow-md transition">
+            <div class="w-12 h-12 rounded-lg bg-brand-blue/10 text-brand-blue flex items-center justify-center mb-4">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-6 h-6">
+                <path d="M9 12l2 2 4-4 1.4 1.4L11 17l-3.4-3.4L9 12z"/>
+                <path d="M12 2a10 10 0 100 20 10 10 0 000-20zm0 18a8 8 0 110-16 8 8 0 010 16z"/>
+              </svg>
+            </div>
+            <h3 class="font-bold text-lg text-brand-blue-dark mb-2">{s.title}</h3>
+            <p class="text-slate-600 text-sm leading-relaxed">{s.body}</p>
+          </div>
+        ))}
+      </div>
+      <p class="text-center text-xs text-slate-400 mt-8 italic">
+        [Draft copy — service descriptions will be reviewed with owner before launch.]
+      </p>
+    </div>
+  </section>
+
+  <!-- Call to action band -->
+  <section class="bg-brand-orange text-white">
+    <div class="max-w-4xl mx-auto px-4 py-12 md:py-16 text-center">
+      <h2 class="text-2xl md:text-4xl font-bold mb-3">Ready for Cleaner Air?</h2>
+      <p class="text-white/90 text-lg mb-6">
+        Give us a call. We'll come out, take a look, and give you a free quote.
+      </p>
+      <a
+        href={`tel:${primaryPhoneTel}`}
+        class="inline-flex items-center gap-2 bg-white text-brand-orange-dark font-bold text-lg px-8 py-4 rounded-lg shadow-lg hover:bg-slate-50 transition"
+      >
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-5 h-5">
+          <path d="M6.62 10.79a15.05 15.05 0 006.59 6.59l2.2-2.2a1 1 0 011.01-.24c1.12.37 2.33.57 3.58.57a1 1 0 011 1V20a1 1 0 01-1 1A17 17 0 013 4a1 1 0 011-1h3.5a1 1 0 011 1c0 1.25.2 2.46.57 3.58a1 1 0 01-.24 1.01l-2.21 2.2z"/>
+        </svg>
+        {primaryPhoneDisplay}
+      </a>
+    </div>
+  </section>
+
+  <!-- Contact -->
+  <section id="contact" class="py-16 md:py-24 bg-slate-50">
+    <div class="max-w-4xl mx-auto px-4">
+      <div class="text-center mb-10">
+        <h2 class="text-3xl md:text-4xl font-bold text-brand-blue-dark mb-3">Contact Us</h2>
+        <p class="text-slate-600">Call or text — fastest way to reach us.</p>
+      </div>
+      <div class="grid md:grid-cols-2 gap-6">
+        <a
+          href={`tel:${primaryPhoneTel}`}
+          class="bg-white border border-slate-200 rounded-xl p-6 hover:border-brand-blue hover:shadow-md transition text-center"
+        >
+          <div class="text-xs uppercase tracking-wide text-slate-500 mb-2">Primary</div>
+          <div class="text-2xl font-bold text-brand-blue-dark">{primaryPhoneDisplay}</div>
+          <div class="text-sm text-slate-500 mt-2">[Owner to confirm primary vs. secondary]</div>
+        </a>
+        <a
+          href={`tel:${secondaryPhoneTel}`}
+          class="bg-white border border-slate-200 rounded-xl p-6 hover:border-brand-blue hover:shadow-md transition text-center"
+        >
+          <div class="text-xs uppercase tracking-wide text-slate-500 mb-2">Secondary</div>
+          <div class="text-2xl font-bold text-brand-blue-dark">{secondaryPhoneDisplay}</div>
+          <div class="text-sm text-slate-500 mt-2">[Purpose TBD]</div>
+        </a>
+      </div>
+      <div class="mt-8 bg-white border border-slate-200 rounded-xl p-6 text-center text-sm text-slate-600">
+        <div class="font-semibold text-brand-blue-dark mb-2">Service Area</div>
+        <div>[Service area and hours pending from owner]</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-brand-blue-dark text-white/80 text-sm">
+    <div class="max-w-6xl mx-auto px-4 py-8 flex flex-col md:flex-row items-center justify-between gap-4">
+      <div>
+        <div class="font-bold text-white">Edgard Duct Cleaning LLC.</div>
+        <div class="text-xs mt-1">Stafford, VA &middot; {primaryPhoneDisplay}</div>
+      </div>
+      <div class="text-xs text-white/60">
+        &copy; {new Date().getFullYear()} Edgard Duct Cleaning LLC. All rights reserved.
+      </div>
+    </div>
+  </footer>
+
+  <CallBar />
+</BaseLayout>

@@ -1,0 +1,15 @@
+---
+const primaryPhoneDisplay = '(540) 288-6840';
+const primaryPhoneTel = '+15402886840';
+---
+
+<a
+  href={`tel:${primaryPhoneTel}`}
+  class="md:hidden fixed bottom-0 left-0 right-0 z-50 bg-brand-orange text-white font-bold text-lg py-4 text-center shadow-lg flex items-center justify-center gap-2"
+>
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-5 h-5">
+    <path d="M2.003 5.884L10 2l7.997 3.884A2 2 0 0119 7.74V17a2 2 0 01-2 2H3a2 2 0 01-2-2V7.74a2 2 0 011.003-1.856zM3 7.74V17h14V7.74L10 4.11 3 7.74z" opacity="0"/>
+    <path d="M6.62 10.79a15.05 15.05 0 006.59 6.59l2.2-2.2a1 1 0 011.01-.24c1.12.37 2.33.57 3.58.57a1 1 0 011 1V20a1 1 0 01-1 1A17 17 0 013 4a1 1 0 011-1h3.5a1 1 0 011 1c0 1.25.2 2.46.57 3.58a1 1 0 01-.24 1.01l-2.21 2.2z"/>
+  </svg>
+  Call {primaryPhoneDisplay}
+</a>
