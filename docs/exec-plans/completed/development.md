@@ -1,9 +1,9 @@
 # Plan: Development guide
 
-- **Status:** active
+- **Status:** completed
 - **Doc:** [development.md](../../development.md)
 - **Audience:** developers setting up the project locally
-- **Completed:**
+- **Completed:** 2026-10-27
 
 ## Goal
 A developer can clone the repo, run the site locally and produce a production build without asking anyone.
@@ -24,7 +24,7 @@ A developer can clone the repo, run the site locally and produce a production bu
 
 ## Steps
 1. Correct the Node and npm requirements to Astro's published ranges.
-2. Keep the clone URL as a placeholder until the repository exists.
+2. Point the clone URL at the real repository.
 3. Document the branch format, commit types and pre-merge checklist.
 4. Add troubleshooting for the most likely setup problems.
 5. Run each documented command.
@@ -33,4 +33,4 @@ A developer can clone the repo, run the site locally and produce a production bu
 - [x] Node and npm versions match Astro's `engines` field
 - [x] Every command in the doc has been run successfully
 - [x] Ignored paths listed in the doc match `.gitignore`
-- [ ] Clone URL points at the real repository
+- [x] Clone URL points at the real repository
